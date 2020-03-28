@@ -9,7 +9,15 @@ set softtabstop=4           " see multiple spaces as tabstops so <BS> does the r
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
-set number relativenumber   " add line numbers
+
+set number relativenumber
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+
 set wildmode=longest,list   " get bash-like tab completions
 colorscheme darkblue
 filetype plugin indent on   " allows auto-indenting depending on file type
