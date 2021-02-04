@@ -10,8 +10,8 @@ Shell           : [zsh](https://www.zsh.org/)
 I use UltiSnips to add custom code-snippets. For autocompletion, I use YouCompleteMe.
 ![Vim Workflow](screenshots/vim_workflow.gif)
 
-Compton not running, 1080p resolution:  
-![Compositor Off](screenshots/1080p_screenfetch.png)
+Compton off, and [cli-visualizer](https://github.com/dpayne/cli-visualizer)  
+![Compositor Off](screenshots/looks.png)
 
 Compton running and 720p resolution:  
 ![Compositor On](screenshots/compositor_on.png)  
