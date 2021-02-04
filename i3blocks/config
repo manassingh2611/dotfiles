@@ -1,0 +1,96 @@
+command=./$BLOCK_NAME/$BLOCK_NAME
+separator_block_width=15
+markup=none
+color=#f3f4f5
+
+[weather]
+command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=300
+color=#FFFFFF
+background=#0091BD
+separator=false
+
+[memory]
+label=RAM 
+interval=30
+color=#FFFFFF
+background=#4E9100
+separator=false
+
+[disk]
+label=🏠 
+DIR=/home
+interval=30
+
+[iface]
+color=#00FF00
+interval=10
+separator=false
+
+[wifi]
+#INTERFACE=wlp3s0
+label=wifi:
+interval=10
+separator=false
+
+[bandwidth]
+#INTERFACE=eth0
+interval=5
+
+[cpu_usage]
+label=CPU 
+interval=10
+min_width=CPU 100.00%
+
+[load_average]
+label=LOAD 
+interval=10
+
+[battery]
+label=⚡ 
+interval=30
+
+[volume]
+label=♪  
+interval=1
+signal=10
+#STEP=5%
+
+[time]
+command=date --rfc-email
+interval=1
+color=#FF0000
+background=#FFFFFF
+
+[temperature]
+label=🔥 
+interval=10
+
+#[bandwidth2]
+##command=$SCRIPT_DIR/bandwidth2 
+#interval=persist
+#markup=pango
+#LABEL=
+#WARN_RX=307200
+#WARN_TX=30720
+#CRIT_RX=512000
+#CRIT_TX=51200
+
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+#[mediaplayer]
+#instance=spotify
+#interval=5
+#signal=10
+
+# Key indicators
+#
+# Add the following bindings to i3 config file:
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+
+#[keyindicator]
+#KEY=CAPS
+#markup=pango
+#interval=once
+#signal=11
+

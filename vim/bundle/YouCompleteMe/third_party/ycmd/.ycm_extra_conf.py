@@ -17,6 +17,7 @@ BASE_FLAGS = [
         '-Wno-variadic-macros',
         '-Wno-unknown-pragmas',
         '-fexceptions',
+        '-Wno-unused-const-variable',
         '-ferror-limit=10000',
         '-DNDEBUG',
         '-std=c++20',
@@ -36,7 +37,7 @@ SOURCE_EXTENSIONS = [
 
 SOURCE_DIRECTORIES = [
         'src',
-        'lib'
+        'lib',
         ]
 
 HEADER_EXTENSIONS = [

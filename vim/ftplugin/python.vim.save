@@ -1,0 +1,2 @@
+nnoremap <F2> :!python3 %<CR>
+nnoremap <F7> :!python3 hello.py<CR>

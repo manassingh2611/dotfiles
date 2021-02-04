@@ -1,0 +1,2 @@
+nnoremap <F2> :!go build % && chmod +x %:r<CR>
+nnoremap <F5> :!./%:r<CR>

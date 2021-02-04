@@ -1,19 +1,19 @@
-# Neovim Resources
+Rice your linux distro to match with mine, as shown in the screenshots below
 
-This is a repo to configure neovim/vim for competitive programming in C/C++.
+Operating System: [Kali Linux](https://www.kali.org/)  
+Window Manager  : [i3wm](https://i3wm.org/)  
+Notifications   : [dunst](https://github.com/dunst-project/dunst)  
+Compositor      : [compton](https://github.com/chjj/compton)  
+Launcher        : [dmenu](https://tools.suckless.org/dmenu/)  
+Shell           : [zsh](https://www.zsh.org/)  
 
-Setting up YouCompleteMe:
+I use UltiSnips to add custom code-snippets. For autocompletion, I use YouCompleteMe.
+![Vim Workflow](screenshots/vim_workflow.gif)
 
-```sh
-git clone https://github.com/ycm-core/YouCompleteMe.git -C ~/.vim/bundle/
-cd ~/.vim/bundle/YouCompleteMe
-python3 install.py --clangd-completer
-```
-Use NERDTree if you like, I installed it, but I hate it because in CP we don't switch much files in an hour. Or do we?
-Apart from that I use UltiSnips too, whose configuration I will add when I next get time. We should not rely on snippets but when everyone is using it, it does not hurt.
+Compton not running, 1080p resolution:  
+![Compositor Off](screenshots/1080p_screenfetch.png)
 
-Here's a little demo of my workflow...
+Compton running and 720p resolution:  
+![Compositor On](screenshots/compositor_on.png)  
 
-![Vim Demo](test.gif)
-
-Special thanks to [Jonas Devlieghere](https://github.com/JDevlieghere) whose YCM config I copied as-it-is from [here](https://jonasdevlieghere.com/a-better-youcompleteme-config/). His flags were just perfect except I added a few -Wnoerrors because the compiler was giving tonne of squiggles for some wrong programming practices us CPers overlook all the time.
+Special thanks to [Jonas Devlieghere](https://github.com/JDevlieghere) whose YCM config I copied as-it-is from [here](https://jonasdevlieghere.com/a-better-youcompleteme-config/). His flags were just perfect except I added a few -Wnoerrors because the compiler was giving tonne of squiggles for the wrong programming practices I overlook all the time.
