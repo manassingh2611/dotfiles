@@ -1,5 +1,5 @@
 set nocompatible
-set laststatus=2 
+set laststatus=2
 set number relativenumber
 
 filetype off "required
@@ -56,7 +56,7 @@ set fileencoding=utf-8
 syntax enable
 set t_Co=256
 set cursorline
-set background=dark
+set background=light
 colorscheme onehalflight
 let g:lightline = {'colorscheme':'onehalfdark'}
 
@@ -64,13 +64,13 @@ inoremap {<CR> {<CR>}<ESC>ko<BS>
 inoremap (<CR> (<CR>)<ESC>ko<BS>
 nnoremap <F3> :NERDTreeToggle<CR>
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR:
-
-set listchars=eol:¬
-set list
-set tabstop=8
-set softtabstop=8
-set expandtab
-set shiftwidth=8
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+" set expandtab
 set showmode!
 set ruler!
 set mouse=a
+set listchars=tab:\ \ ,eol:¬,nbsp:_,extends:>,precedes:<
+" set listchars=eol:$,tab:>-,trail:~,
+set list
