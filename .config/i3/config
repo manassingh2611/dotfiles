@@ -1,8 +1,8 @@
 ## [Autostart]
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id feh --no-fehbg --bg-fill '/home/manas/Pictures/wallpapers/./g6sng2x3lwn91.png'
-exec --no-startup-id i3-msg 'workspace 1; exec google-chrome --password-store=gnome;'
-exec --no-startup-id i3-msg 'workspace 2; xfce4-terminal --working-directory="/home/manas/coding/" -e "vim -S coding.vim"; workspace 1;'
+exec --no-startup-id i3-msg 'workspace 1; exec firefox;'
+exec --no-startup-id i3-msg 'workspace 2; gnome-terminal; workspace 1;'
 exec --no-startup-id i3-msg 'workspace 10; exec nautilus; workspace 1;'
 # exec --no-startup-id "compton"
 
@@ -41,7 +41,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -190,7 +190,7 @@ client.placeholder      #B8FFC6 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #CBFF52
 
 # remove borders from windows
-for_window [class="^.*"] border pixel 0
+# for_window [class="^.*"] border pixel 0
 
 # full screenshot
 bindsym --release Print exec "import -window root ~/Pictures/screenshots/screenshot_`date '+%d_%m_%Y.%H%M_%S'`.png"
@@ -205,5 +205,7 @@ bindsym --release Ctrl+Shift+Print exec "import -screen ~/Pictures/screenshots/s
 bindsym --release XF86AudioMute exec "amixer -D pulse sset Master toggle"
 bindsym --release XF86AudioRaiseVolume exec "amixer -D pulse sset Master 5%+"
 bindsym --release XF86AudioLowerVolume exec "amixer -D pulse sset Master 5%-"
+bindsym --release XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym --release XF86MonBrightnessUp exec --no-startup-id brightnessctl set 5%+
 
 #bindsym Control+Print exec gnome-screenshot -i
